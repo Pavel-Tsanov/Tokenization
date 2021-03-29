@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane fx:id="gridPane" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="366.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="373.0" minWidth="10.0" prefWidth="234.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <PasswordField fx:id="pwdPassword" prefHeight="44.0" prefWidth="264.0" promptText="Парола" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="44.0" right="14.0" top="130.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="txtUsername" prefHeight="44.0" prefWidth="264.0" promptText="Потребителско име" GridPane.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="44.0" right="14.0" top="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#btnRegisterClicked" prefHeight="36.0" prefWidth="145.0" text="Регистрирай се" textAlignment="CENTER" GridPane.rowIndex="1">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="130.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnLogin" alignment="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnLoginClicked" prefHeight="36.0" prefWidth="81.0" text="Влез" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="240.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="lblTokenNumber" prefHeight="21.0" prefWidth="192.0" text="Токен" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="140.0" left="24.0" right="120.0" top="14.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="btnExtract" mnemonicParsing="false" onAction="#btnExtractClicked" prefHeight="25.0" prefWidth="109.0" text="Извлечи" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="250.0" top="80.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Button>
+            <Label fx:id="lblCardNumber" alignment="TOP_LEFT" prefHeight="48.0" prefWidth="155.0" text="Номер на карта" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="140.0" top="14.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="txtTokenNumber" onKeyPressed="#txtTokenNumberOnKeyPressed" prefHeight="36.0" prefWidth="161.0" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="50.0" left="44.0" right="114.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtCardNumber" onKeyPressed="#txtCardNumberOnKeyPressed" prefHeight="36.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="50.0" right="24.0" />
+               </GridPane.margin>
+            </TextField>
+            <DialogPane />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
